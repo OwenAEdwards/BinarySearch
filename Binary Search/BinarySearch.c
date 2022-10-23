@@ -9,13 +9,13 @@ typedef struct output {
 } output;
 
 void sortDataStructAscendOrder(int *dataStruct, int numOfElements) {
-   int temp, i, j, k;
-   for (j = 0; j < numOfElements; ++j) {
-      for (k = j + 1; k < numOfElements; ++k) {
-         if (dataStruct[j] > dataStruct[k]) {
-            temp = dataStruct[j];
-            dataStruct[j] = dataStruct[k];
-            dataStruct[k] = temp;
+   int tmp;
+   for (int i = 0; i < numOfElements; ++i) {
+      for (int j = i + 1; j < numOfElements; ++j) {
+         if (dataStruct[i] > dataStruct[j]) {
+            tmp = dataStruct[i];
+            dataStruct[i] = dataStruct[j];
+            dataStruct[j] = tmp;
          }
       }
    }
